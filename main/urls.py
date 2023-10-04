@@ -11,6 +11,8 @@ from main.views import (
     register,
     login_user,
     logout_user,
+    get_product_json,
+    add_product_ajax,
 )
 
 app_name = 'main'
@@ -27,4 +29,6 @@ urlpatterns = [
     path('register/', register, name='register'), 
     path('login/', login_user, name='login_user'),
     path('logout/', logout_user, name='logout_user'),
+    path('get-product/', get_product_json, name='get_product_json'),
+    path('create-product-ajax/', add_product_ajax, name='add_product_ajax')
 ]
